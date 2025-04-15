@@ -22,8 +22,6 @@ jobs:
     - uses: actions/checkout@v4
     - run: pwd
     - run: ls -a
-    - run: cd ..
-    - run: pwd
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
