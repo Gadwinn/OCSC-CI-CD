@@ -5,14 +5,14 @@ on:
     branches: [main, dev/*]
   pull_request:
     branches: [main, dev/*]
-         
+
 jobs:
   build:
     runs-on: ubuntu-latest
     defaults:
       run:
-         working-directory: /home/runner/work/OCSC-CI-CD/OCSC-CI-CD
-        
+        working-directory: front
+
     strategy:
       matrix:
         node-version: [23.11]
@@ -31,4 +31,4 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run test:prod
-    - run: npm run lint 
+    - run: npm run lint
